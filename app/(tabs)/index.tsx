@@ -1,4 +1,3 @@
-import { Image } from 'expo-image';
 import { Platform, StyleSheet } from 'react-native';
 
 import Search from '@/components/Search';
@@ -12,7 +11,8 @@ import { Link } from 'expo-router';
 export default function HomeScreen() {
   return (
     <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}>
+      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
+      title="CookLocal">
 
       <Search />
 
@@ -20,7 +20,8 @@ export default function HomeScreen() {
         <ThemedText type="title">Trending Receipe</ThemedText>
       </ThemedView>
 
-      <TrendingRecipes />
+      <TrendingRecipes>
+      </TrendingRecipes>
 
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">Step 1: Try it</ThemedText>
@@ -34,7 +35,7 @@ export default function HomeScreen() {
               web: 'F12',
             })}
           </ThemedText>{' '}
-          to open developer tools.
+          to open developer tools.?
         </ThemedText>
       </ThemedView>
 
